@@ -16,6 +16,15 @@
     src: url('./font/metal-mania-v23-latin-regular.woff2') format('woff2');
 }
 
+/* metal-mania-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Angel wish';
+    font-style: normal;
+    font-weight: normal;
+    src: url('./font/Angel wish.ttf') format('truetype');
+}
+
 * {
     box-sizing: border-box;
 }
@@ -46,7 +55,7 @@ body {
 .logo {
     font-weight: bold;
     letter-spacing: 2px;
-    font-family: 'Rubik Glitch', 'Metal Mania', sans-serif;
+    font-family: 'Angel wish', sans-serif;
     text-transform: uppercase;
     text-shadow: 2px 2px 0 black, -2px -2px 0 red;
 }
@@ -58,7 +67,7 @@ body {
 h1 {
     font-weight: bold;
     letter-spacing: 2px;
-    font-family: 'Rubik Glitch', 'Metal Mania', sans-serif;
+    font-family: 'Angel wish', sans-serif;
     text-transform: uppercase;
     text-shadow: 2px 2px 0 black, -2px -2px 0 red;
 }

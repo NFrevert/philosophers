@@ -55,7 +55,7 @@
       position: absolute;
       width: 4px;
       height: 4px;
-      background: radial-gradient(circle, #ffdd55, #ff6a00);
+      background: radial-gradient(circle, #AAA, #fff);
       border-radius: 50%;
       opacity: 0;
       animation: rise linear forwards;
@@ -78,17 +78,26 @@
     }
 
     /* Türspalt */
+
     .door-gap {
       position: absolute;
-      top: 44%;
-      left: calc(50% + 10px);
-      transform: translateX(-50%);
-      height: 50%;
-      width: 10px;
+      top: 26.7%;
+      left: calc(50.5% + 5px);
+      transform: rotate(-0.7deg);
+      height: 61.6%;
+      width: 15px;
       border-radius: 5px;
-
-      background: linear-gradient(180deg, #ff6a00, #ffd700);
-      box-shadow: 0 0 25px 8px #ff6a00;
+      /* border: 2px #c02306 solid; */
+      background: 
+        linear-gradient(
+          90deg,
+          #c02306 0%,
+          #f8b9ab 25%,
+          #ffffff 50%,
+          #f8b9ab 75%,
+          #c02306 100%
+        );
+      box-shadow: 0 0 25px 8px #c022067a;
 
       cursor: pointer;
       transition: width 0.4s ease, box-shadow 0.4s ease;
@@ -97,38 +106,83 @@
       z-index: 10;
     }
 
-    @keyframes pulse {
-      0%, 100% { box-shadow: 0 0 25px 8px #ff6a00; }
-      50% { box-shadow: 0 0 40px 14px #ffd700; }
+
+    @media (min-aspect-ratio: 180/100) {
+      .door-gap {
+        left: calc(50.9%);
+      }
     }
 
-    .door-gap:hover {
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 25px 8px #c02306; }
+      50% { box-shadow: 0 0 40px 14px #c0220652; }
+    }
+
+    /* .door-gap {
       width: 20px;
       box-shadow: 0 0 70px 25px #ff6a00;
-    }
+    } */
 
     /* Hover-Text */
-    .hover-text {
+    .hover-text-1, .hover-text-2, .hover-text-3 {
       position: absolute;
       top: 64%;
       left: calc(50% + 40px);
       transform: translateY(-50%);
-      color: #ffd38a;
+      color: #ff5a5a;
       font-size: 1.2rem;
       font-weight: 300;
       letter-spacing: 1px;
       opacity: 0;
       transition: opacity 0.4s ease;
-      text-shadow: 0 0 10px #ff6a00;
+      text-shadow: 0 0 10px #7e0000;
       z-index: 15;
       width: 300px;
       pointer-events: none;
+      animation: textCycle 6s infinite;
+    }
+    
+    .hover-text-1 {
+      animation-delay: 0s;
+    }
+
+    .hover-text-2 {
+      animation-delay: 2s;
+      left: calc(50% - 40px);
+      top: 48%;
+    }
+
+    .hover-text-3 {
+      animation-delay: 4s;
+      top: 52%;
+    }
+
+    @keyframes textCycle {
+      0% {
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 1;
+      }
+
+      25% {
+        opacity: 1;
+      }
+
+      35% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 0;
+      }
     }
 
     /* Hover zeigt Text */
-    .door-gap:hover + .hover-text {
+    /* .door-gap:hover + .hover-text {
       opacity: 1;
-    }
+    } */
 
     .logo {
       position: absolute;
@@ -142,6 +196,85 @@
       z-index: 20;
       pointer-events: none;
       user-select: none;
+    }
+
+    .fog-container {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 35%;
+      overflow: hidden;
+      pointer-events: none;
+
+      /* weiche Ausblendung nach oben */
+      mask-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 1) 40%,
+        rgba(0, 0, 0, 0) 100%
+      );
+    }
+
+
+    .fog {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.35;
+    }
+
+    .fog-1 {
+      width: 800px;
+      height: 250px;
+      background: rgba(255, 255, 255, 0.25);
+      left: -300px;
+      bottom: 0;
+      animation: drift1 25s linear infinite;
+    }
+
+    .fog-2 {
+      width: 1200px;
+      height: 300px;
+      background: rgba(255, 255, 255, 0.15);
+      left: -400px;
+      bottom: 40px;
+      animation: drift2 35s linear infinite;
+    }
+
+    .fog-3 {
+      width: 900px;
+      height: 220px;
+      background: rgba(255, 255, 255, 0.2);
+      left: -250px;
+      bottom: 80px;
+      animation: drift3 30s linear infinite;
+    }
+
+    @keyframes drift1 {
+      from {
+        transform: translateX(-100px);
+      }
+      to {
+        transform: translateX(calc(100vw + 200px));
+      }
+    }
+
+    @keyframes drift2 {
+      from {
+        transform: translateX(calc(100vw + 200px));
+      }
+      to {
+        transform: translateX(-300px);
+      }
+    }
+
+    @keyframes drift3 {
+      from {
+        transform: translateX(-200px);
+      }
+      to {
+        transform: translateX(calc(100vw + 300px));
+      }
     }
 
   </style>
@@ -161,16 +294,23 @@
     <!-- Türspalt -->
     <div class="door-gap" id="door-gap"></div>
 
+    <div class="fog-container">
+      <div class="fog fog-1"></div>
+      <div class="fog fog-2"></div>
+      <div class="fog fog-3"></div>
+    </div>
+
     <!-- Hover-Text -->
-    <div class="hover-text" id="hoverText">
-      Open the door<br>
-      and face<br>
-      your demons</div>
+    <div class="hover-text-1" id="hoverText-1">Open</div>
+    <div class="hover-text-2" id="hoverText-2">the</div>
+    <div class="hover-text-3" id="hoverText-3">Door</div>
   </div>
 
   <script>
     const sparks = document.getElementById('sparks');
-    const hoverText = document.getElementById('hoverText');
+    const hoverText1 = document.getElementById('hoverText-1');
+    const hoverText2 = document.getElementById('hoverText-2');
+    const hoverText3 = document.getElementById('hoverText-3');
 
     /* Bild klickbar machen */
     document.getElementById('clickLayer').addEventListener('click', () => {
