@@ -6,6 +6,14 @@
   <title>Philosophers</title>
 
   <style>
+    @font-face {
+        font-display: swap;
+        font-family: 'Angel wish';
+        font-style: normal;
+        font-weight: normal;
+        src: url('./font/Angel wish.ttf') format('truetype');
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -124,22 +132,46 @@
     } */
 
     /* Hover-Text */
-    .hover-text-1, .hover-text-2, .hover-text-3 {
+    .hover-text-1,
+    .hover-text-1-R,
+    .hover-text-1-L,
+    .hover-text-2,
+    .hover-text-2-R,
+    .hover-text-2-L,
+    .hover-text-2-R,
+    .hover-text-3,
+    .hover-text-3-R,
+    .hover-text-3-L {
       position: absolute;
       top: 44%;
       left: calc(50% + 40px);
-      transform: translateY(-50%);
-      color: #ff5a5a;
-      font-size: 1.2rem;
+      font-size: 2rem;
       font-weight: 300;
-      letter-spacing: 1px;
+      font-family: 'angel wish';
       opacity: 0;
-      transition: opacity 0.4s ease;
-      text-shadow: 0 0 10px #7e0000;
+      /* transition: opacity 0.4s ease; */
+      /* text-shadow: 0 0 10px #7e0000; */
       z-index: 15;
       width: 300px;
       pointer-events: none;
-      animation: textCycle 6s infinite;
+    }
+
+    .hover-text-1-R,
+    .hover-text-2-R,
+    .hover-text-3-R{
+      animation: portalTextRechts 6s infinite;
+    }
+
+    .hover-text-1-L,
+    .hover-text-2-L,
+    .hover-text-3-L{
+      animation: portalTextLinks 6s infinite;
+    }
+
+    .hover-text-1,
+    .hover-text-2,
+    .hover-text-3 { 
+      animation: portalText 6s infinite;
     }
     
     .hover-text-1 {
@@ -157,27 +189,149 @@
       top: 52%;
     }
 
-    @keyframes textCycle {
-      0% {
+    /* .hover-text-1-1,
+    .hover-text-2-1,
+    .hover-text-3-1
+    {
+    opacity: 0;
+    font-size: 2rem;
+    font-weight: 600;
+      background: linear-gradient(
+          90deg,
+          #6c7785 0%,
+          #a8c0dd 35%,
+          #ffffff 50%,
+          #a8c0dd 65%,
+          #6c7785 100%
+      );
+      letter-spacing: 1px;
+    background-size: 300% 100%;
+    background-position: 150% center;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
+
+@keyframes portalText {
+
+    0% {
         opacity: 0;
-      }
-
-      10% {
-        opacity: 1;
-      }
-
-      25% {
-        opacity: 1;
-      }
-
-      35% {
-        opacity: 0;
-      }
-
-      100% {
-        opacity: 0;
-      }
+        background-position: 150% center;
+        /* filter: blur(8px); */
+        color: #ccc;
+        -webkit-text-stroke: 1px rgb(255, 115, 115);
+        text-shadow:
+            0 0 0px #ccc,
+            0 0 0px #ccc,
+            0 0 0px #ccc;
     }
+    
+    50% {
+        opacity: 0;
+        background-position: 150% center;
+        /* filter: blur(8px); */
+        color: #ccc;
+        -webkit-text-stroke: 1px rgb(255, 115, 115);
+    }
+
+    70% {
+        opacity: 1;
+        filter: blur(0px);
+        color: #ccc;
+        -webkit-text-stroke: 1px rgb(255, 115, 115);
+        
+        text-shadow:
+            0 0 0px #FFF,
+            0 0 0px #FFF,
+            0 0 0px #FFF;
+    }
+    /* 80% {
+      filter: blur(0px);
+        color: #ccc;
+        -webkit-text-stroke: 1px #ffffff;
+      opacity: 1;
+        text-shadow:
+            0 0 10px #FFF,
+            0 0 20px #FFF,
+            0 0 40px #FFF;
+    } */
+    
+    100% {
+        opacity: 0;
+        color: rgb(172, 13, 13);
+        filter: blur(5px);
+        text-shadow:
+            0 0 10px rgb(172, 13, 13),
+            0 0 20px rgb(172, 13, 13),
+            0 0 40px rgb(172, 13, 13);
+    }
+}
+@keyframes portalTextRechts {
+
+    0% {
+        opacity: 0;
+        background-position: 150% center;
+        filter: blur(8px);
+        transform: translateX(100px);
+        color: rgb(88, 99, 153);
+        text-shadow:
+            0 0 10px rgb(88, 99, 153),
+            0 0 20px rgb(88, 99, 153),
+            0 0 40px rgb(88, 99, 153);
+    }
+
+    50% {
+        opacity: 1;
+        filter: blur(3px);
+        
+        text-shadow:
+            0 0 0px #CCC,
+            0 0 0px #CCC,
+            0 0 0px #CCC;
+    }
+    80% {
+      filter: blur(0px);
+      opacity: 0.5;
+    }
+    
+    100% {
+        opacity: 0;
+        filter: blur(5px);
+    }
+}
+@keyframes portalTextLinks {
+
+    0% {
+        opacity: 0;
+        background-position: 150% center;
+        filter: blur(8px);
+        transform: translateX(-100px);
+        color: #ff5a5a;
+        text-shadow:
+            0 0 10px #ff5a5a,
+            0 0 20px #ff5a5a,
+            0 0 40px #ff5a5a;
+    }
+
+    50% {
+        opacity: 1;
+        filter: blur(3px);
+        
+        text-shadow:
+            0 0 0px #CCC,
+            0 0 0px #CCC,
+            0 0 0px #CCC;
+    }
+    80% {
+      filter: blur(0px);
+      opacity: 0.5;
+    }
+    
+    100% {
+        opacity: 0;
+        filter: blur(5px);
+    }
+}
 
     /* Hover zeigt Text */
     /* .door-gap:hover + .hover-text {
@@ -229,7 +383,7 @@
       background: rgba(255, 255, 255, 0.25);
       left: -300px;
       bottom: 0;
-      animation: drift1 25s linear infinite;
+      animation: drift1 25s ease-in-out infinite alternate;
     }
 
     .fog-2 {
@@ -238,7 +392,7 @@
       background: rgba(255, 255, 255, 0.15);
       left: -400px;
       bottom: 40px;
-      animation: drift2 35s linear infinite;
+      animation: drift2 35s ease-in-out infinite alternate;
     }
 
     .fog-3 {
@@ -247,7 +401,7 @@
       background: rgba(255, 255, 255, 0.2);
       left: -250px;
       bottom: 80px;
-      animation: drift3 30s linear infinite;
+      animation: drift3 30s ease-in-out infinite alternate;
     }
 
     @keyframes drift1 {
@@ -302,15 +456,18 @@
 
     <!-- Hover-Text -->
     <div class="hover-text-1" id="hoverText-1">Open</div>
+    <!-- <div class="hover-text-1-R" id="hoverText-1-R">Open</div> -->
+    <!-- <div class="hover-text-1-L" id="hoverText-1-L">Open</div> -->
     <div class="hover-text-2" id="hoverText-2">the</div>
-    <div class="hover-text-3" id="hoverText-3">Door</div>
+    <!-- <div class="hover-text-2-R" id="hoverText-2-R">the</div> -->
+    <!-- <div class="hover-text-2-L" id="hoverText-2-L">the</div> -->
+    <div class="hover-text-3" id="hoverText-3">Gate</div>
+    <!-- <div class="hover-text-3-R" id="hoverText-3-R">Gate</div> -->
+    <!-- <div class="hover-text-3-L" id="hoverText-3-L">Gate</div> -->
   </div>
 
   <script>
     const sparks = document.getElementById('sparks');
-    const hoverText1 = document.getElementById('hoverText-1');
-    const hoverText2 = document.getElementById('hoverText-2');
-    const hoverText3 = document.getElementById('hoverText-3');
 
     /* Bild klickbar machen */
     document.getElementById('clickLayer').addEventListener('click', () => {
@@ -346,12 +503,6 @@
     }
 
     setInterval(createSpark, 120);
-
-    /* Text nach 2 Sekunden automatisch einblenden */
-    setTimeout(() => {
-      hoverText.style.opacity = 1;
-    }, 2000);
-
   </script>
 
 </body>
