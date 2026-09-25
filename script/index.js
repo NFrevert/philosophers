@@ -2,12 +2,12 @@ const sparks = document.getElementById('sparks');
 
     /* Bild klickbar machen */
     document.getElementById('clickLayer').addEventListener('click', () => {
-      window.location.href = '../html/news.html';
+      window.location.href = './html/news.html';
     });
 
     /* Türspalt klickbar */
     document.getElementById('door-gap').addEventListener('click', () => {
-      window.location.href = '../html/news.html';
+      window.location.href = './html/news.html';
     });
 
     /* Funken erzeugen */
