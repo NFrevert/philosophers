@@ -4,7 +4,7 @@
         font-family: 'Angel wish';
         font-style: normal;
         font-weight: normal;
-        src: url('./font/Angel wish.ttf') format('truetype');
+        src: url('../font/Angel wish.ttf') format('truetype');
     }
 
     body {
