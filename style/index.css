@@ -7,6 +7,20 @@
         src: url('../font/Angel wish.ttf') format('truetype');
     }
 
+    html, body {
+      overflow: hidden;
+    }
+
+    #pageContent {
+      transform: scale(1);
+      transition: transform 3s ease-in;
+      transform-origin: center center;
+    }
+
+    #pageContent.zoom {
+      transform: scale(1.5);
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -424,3 +438,16 @@
       }
     }
 
+#fadeOverlay {
+    position: fixed;
+    inset: 0;
+    background: black;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 3s ease;
+    z-index: 9999;
+}
+
+#fadeOverlay.active {
+    opacity: 1;
+}

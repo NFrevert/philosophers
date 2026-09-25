@@ -2,7 +2,19 @@ const sparks = document.getElementById('sparks');
 
     /* Bild klickbar machen */
     document.getElementById('clickLayer').addEventListener('click', () => {
-      window.location.href = './html/news.html';
+        // Seite "freezen"
+        document.body.style.pointerEvents = 'none';
+
+        // Zoom starten
+        document.getElementById('pageContent').classList.add('zoom');
+
+        // Fade starten
+        document.getElementById('fadeOverlay').classList.add('active');
+
+        // Nach 3 Sekunden weiterleiten
+        setTimeout(() => {
+            window.location.href = './html/news.html';
+        }, 3000);
     });
 
     /* Türspalt klickbar */
