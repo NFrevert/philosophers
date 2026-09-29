@@ -97,10 +97,10 @@
     .door-gap {
       position: absolute;
       top: 26.7%;
-      left: calc(50.5% + 5px);
+      left: calc(50% - 0.25%);
       transform: rotate(-0.7deg);
       height: 61.6%;
-      width: 15px;
+      width: 0.7%;
       border-radius: 5px;
       /* border: 2px #c02306 solid; */
       background: 
@@ -122,37 +122,25 @@
     }
 
 
-    @media (min-aspect-ratio: 180/100) {
+    /* @media (min-aspect-ratio: 180/100) {
       .door-gap {
         left: calc(50.9%);
       }
-    }
+    } */
 
     @keyframes pulse {
       0%, 100% { box-shadow: 0 0 25px 8px #c02306; }
       50% { box-shadow: 0 0 40px 14px #c0220652; }
     }
 
-    /* .door-gap {
-      width: 20px;
-      box-shadow: 0 0 70px 25px #ff6a00;
-    } */
-
     /* Hover-Text */
     .hover-text-1,
-    .hover-text-1-R,
-    .hover-text-1-L,
     .hover-text-2,
-    .hover-text-2-R,
-    .hover-text-2-L,
-    .hover-text-2-R,
-    .hover-text-3,
-    .hover-text-3-R,
-    .hover-text-3-L {
+    .hover-text-3 {
       position: absolute;
-      top: 44%;
-      left: calc(50% + 40px);
-      font-size: 2rem;
+      top: 40%;
+      left: 57%;
+      /* font-size: 2rem; */
       font-weight: 300;
       font-family: 'angel wish';
       opacity: 0;
@@ -163,22 +151,11 @@
       pointer-events: none;
     }
 
-    .hover-text-1-R,
-    .hover-text-2-R,
-    .hover-text-3-R{
-      animation: portalTextRechts 6s infinite;
-    }
-
-    .hover-text-1-L,
-    .hover-text-2-L,
-    .hover-text-3-L{
-      animation: portalTextLinks 6s infinite;
-    }
-
     .hover-text-1,
     .hover-text-2,
     .hover-text-3 { 
       animation: portalText 6s infinite;
+      font-size: 10vmin;
     }
     
     .hover-text-1 {
@@ -187,13 +164,13 @@
 
     .hover-text-2 {
       animation-delay: 2s;
-      left: calc(50% - 40px);
-      top: 48%;
+      left: calc(43% - 10vmin);
+      top: 50%;
     }
 
     .hover-text-3 {
       animation-delay: 4s;
-      top: 52%;
+      top: 60%;
     }
 
     /* .hover-text-1-1,
