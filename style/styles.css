@@ -31,21 +31,18 @@
 
 body {
     margin: 0;
-    overflow-x: hidden;
-    /* background: radial-gradient(ellipse at center, #0a0a0f 0%, #000000 100%); */
     background: url('../img/Philosophers-Background.jpg') no-repeat center center fixed;
     
     background-size: cover;
     font-family: 'Metal Mania', sans-serif;
-    /* color: rgb(143, 151, 196); */
     color: rgb(234, 234, 232);
-    /* animation: bodyAppear 2s ease-in-out; */
 }
 
-body::after {
+body.animation::after {
     content: "";
     position: fixed;
     inset: 0;
+    overflow: hidden;
 
     background: black;
     opacity: 0;
@@ -63,24 +60,63 @@ body::after {
     }
 }
 
-/* NAVBAR */
-.navbar {
-    position: fixed;
+a {
+    color: rgb(143, 151, 196);
+    text-decoration: none;
+    position: relative;
+}
+
+.navigation {
+    position: absolute;
+    overflow: hidden;
+    top: 35px;
+    left: calc(50% - 140px);
+    height: 280px;
+    width: 280px;
+    z-index: 100000;
+}
+
+.navigation.animation {
+    animation: fadeInLogoText 4s ease-in-out;
+}
+
+.navigation a.active {
+    color: #fff;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: rgb(234, 234, 232);
+    font-family: 'Angel wish', sans-serif;
+    font-size: 2em;
+    position: absolute;
+    color: rgb(143, 151, 196);
+}
+
+.navigation .top-left {
     top: 0;
     left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    z-index: 10;
-    background: rgba(0,0,0,0.3);
-    backdrop-filter: blur(10px);
+}
+
+.navigation .top-right {
+    top: 0;
+    right: 0;
+}
+
+.navigation .bottom-left {
+    bottom: 0;
+    left: 0;
+}
+
+.navigation .bottom-right {
+    bottom: 0;
+    right: 0;
 }
 
 /* Logo */
 .logo {
     position: absolute;
+    overflow: hidden;
     top: 15px;
     left: calc(50% - 160px);
     height: 320px;
@@ -96,6 +132,9 @@ body::after {
     z-index: 10;
     background: rgba(0,0,0,0.5);
     backdrop-filter: blur(10px);
+}
+
+.logo.animation {
     animation: fadeIn 4s ease-in-out;
 }
 
@@ -130,6 +169,9 @@ body::after {
 
 .logo a span {
     color: rgb(234, 234, 232);
+}
+
+.logo a span.animation {
     animation: fadeInLogoText 4s ease-in-out;
 }
 
@@ -164,8 +206,12 @@ body::after {
     position: absolute;
     width: 100%;
     height: 100%;
+}
+
+.logo-orbit.animation {
     animation: rotateOrbit 4s linear;
 }
+
 @keyframes rotateOrbit {
 from {
 transform: rotate(0deg);
@@ -201,32 +247,24 @@ transform: rotate(360deg);
     transform: translateX(-50%);
 }
 
-/* .logo-triangle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 100px solid;
-    border-color: rgb(234, 234, 232);
-    transform: translate(-50%, -50%);
-} */
- .logo-triangle {
+.logo-triangle {
     position: absolute;
     width: 161px;
     height: 119px;
     z-index: 1;
+}
+
+.logo-triangle.animation {
     animation: rotatetriangle 4s linear;
 }
+
 @keyframes rotatetriangle {
-from {
-transform: rotate(0deg);
-}
-to {
-transform: rotate(-360deg);
-}
+    from {
+    transform: rotate(0deg);
+    }
+    to {
+    transform: rotate(-360deg);
+    }
 }
 
 .line {
@@ -268,89 +306,12 @@ h1 {
     text-shadow: 2px 2px 0 black, -2px -2px 0 rgb(143, 151, 196);
 }
 
-.nav-links {
-    display: flex;
-    gap: 25px;
-}
-
-.nav-links a {
-    color: rgb(143, 151, 196);
-    text-decoration: none;
-    position: relative;
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 1px;
-    bottom: -3px;
-    left: 0;
-    color: rgb(143, 151, 196);
-    transition: 0.3s;
-}
-
-.nav-links a:hover::after {
-    width: 100%;
-}
-
-/* BURGER */
-.burger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-    z-index: 11;
-}
-
-.burger div {
-    width: 25px;
-    height: 2px;
-    background: rgb(255, 204, 109);
-}
-
-/* MOBILE MENU */
-.mobile-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.95);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    transform: translateY(-100%);
-    transition: 0.4s;
-    z-index: 9;
-}
-
-.mobile-menu.active {
-    transform: translateY(0);
-}
-
-.mobile-menu a {
-    color: rgb(143, 151, 196);
-    text-decoration: none;
-    font-size: 24px;
-}
-
-/* 🔥 FIRE BACKGROUND */
-.fire-background {
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
 /* 🔥 Funken */
 .fire-sparks {
     position: absolute;
     inset: 0;
     pointer-events: none;
-    overflow: visible; /* war hidden */
+    overflow: hidden; /* war hidden */
     z-index: 1;
 }
 
@@ -383,22 +344,22 @@ h1 {
 /* CONTENT */
 .content-wrapper {
     position: absolute;
-    top: 480px;
+    top: 340px;
     width: 100%;
     display: flex;
     justify-content: center;
     padding: 20px;
     z-index: 5;
-    animation: fadeInLogoText 4s ease-in-out;
 }
 
-
+.content-wrapper.animation {
+    animation: fadeInLogoText 4s ease-in-out;
+}
 
 .content-box {
     width: 100%;
     max-width: 700px;
     padding: 30px;
-    margin-left: -20px;
     border-radius: 20px;
 
     /* Hintergrund: leicht transparent, warm */
@@ -431,6 +392,20 @@ h1 {
     }
 }
 
+.aboutus-image {
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+    margin: 20px auto;
+}
+.image-description {
+    display: block;
+    text-align: center;
+    font-size: 0.9em;
+    font-family: 'Angel wish';
+    color: #999;
+    margin-top: 5px;
+}
 
 
 
@@ -441,7 +416,7 @@ h1 {
       opacity: 0.35;
     }
 
-    .fog-1 {
+    /* .fog-1 {
       width: 800px;
       height: 250px;
       background: rgba(255, 255, 255, 0.25);
@@ -466,7 +441,7 @@ h1 {
       left: -250px;
       bottom: 80px;
       animation: drift3 30s ease-in-out infinite alternate;
-    }
+    } */
 
     @keyframes drift1 {
       from {

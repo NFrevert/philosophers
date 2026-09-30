@@ -13,13 +13,13 @@ const sparks = document.getElementById('sparks');
 
         // Nach 3 Sekunden weiterleiten
         setTimeout(() => {
-            window.location.href = './html/news.html';
+            window.location.href = './html/aboutus.html';
         }, 3000);
     });
 
     /* Türspalt klickbar */
     document.getElementById('door-gap').addEventListener('click', () => {
-      window.location.href = './html/news.html';
+      window.location.href = './html/aboutus.html';
     });
 
     /* Funken erzeugen */

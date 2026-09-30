@@ -4,50 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Philosophers</title>
-    <link rel="stylesheet" href="../style/styles.css">
+    <link rel="stylesheet" href="../style/styles.css?v=2026.09.29">
 </head>
-<body>
+<body class="animation">
+  <div class="navigation animation">
+    <a class="top-left" href="../index.html">Start</a>
+    <a class="top-right" href="./news.html">News</a>
+    <a class="bottom-left active" href="./aboutus.html">Über uns</a>
+    <a class="bottom-right" href="./contact.html">Kontakt</a>
+  </div>
+  
+  <div class="logo animation">
+    <a href="../index.html">
+      <span class="animation">
+        Philosophers
+      </span>
+    </a>
+    <div class="logo-inner-circle"></div>
 
-  <div class="navbar">
-    <div class="logo"><a href="./index.html">Philosophers</a></div>
-
-    <div class="nav-links">
-      <a href="./index.html">Home</a>
-      <a href="./news.html">News</a>
-      <a href="./aboutus.html">Über uns</a>
-      <a href="./contact.html">Kontakt</a>
+    <div class="logo-orbit animation">
+      <div class="logo-top-circle"></div>
+      <div class="logo-bottom-circle"></div>
     </div>
 
-    <div class="burger" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
+    <div class="logo-triangle animation">
+      <div class="line bottom"></div>
+      <div class="line left"></div>
+      <div class="line right"></div>
     </div>
   </div>
 
-  <div class="mobile-menu" id="mobileMenu">
-      <a href="./index.html">Home</a>
-      <a href="./news.html">News</a>
-      <a href="./aboutus.html">Über uns</a>
-      <a href="./contact.html">Kontakt</a>
+  <div class="fog-container">
+    <div class="fog fog-1"></div>
+    <div class="fog fog-2"></div>
+    <div class="fog fog-3"></div>
   </div>
 
-  <!-- 🔥 FIRE BACKGROUND -->
-  <div class="fire-background">
+  <div class="fire-sparks" id="fireSparks"></div>
 
-    <!-- Glühen -->
-    <div class="fire-glow"></div>
-
-    <!-- Funken -->
-    <div class="fire-sparks" id="fireSparks"></div>
-  </div>
-
-  <!-- CONTENT -->
-  <div class="content-wrapper">
+  <div class="content-wrapper animation">
     <div class="content-box">
-        <h1>Über uns</h1>
+      <h1>Über uns</h1>
       <p>
-          ♥ Under Construction ♥
+          Wir sind Philosophers und heißen dich herzlich willkommen!<br>
+          <img src="../img/Philosophers-Bandmeeting.jpeg" alt="Bandmeeting" class="aboutus-image">
+          <span class="image-description">[Piotr, Lukas, Simon, Nils, Dennis]</span><br>
+          <br>
+          Wir sind eine Metalcore-Band aus Hamburg. Unsere Musik definiert sich durch
+          kraftvolle Riffs, kontrastreichen Vocals, explosive Drums und dazu einem eingehenden Bass.
+          Unser Name definiert auch unsere Lyrics, 
+          die bekannte und unbekannte philosophische Themen und Geschichten aufgreift und interpretiert.
+          Oder auch spannende Geschichten, die uns bewegen und durch das philosopische Kalaidoskop mit euch teilen möchten.<br>
+          <br>
+          Die Band wurde 2021 von unseren Gitarristen, Dennis und Lukas, gegründet. Das Schlagzeug übernimmt Piotr seit 2024.
+          Seit 2026 haben Simon den Bass und Nils die Vocals übernommen.<br>
+          <br>
+          Wir treffen uns regelmäßig zum Proben, haben bereits ein Set für unsere Live-Auftritte zusammengestellt 
+          und arbeiten kontinuierlich an neuer Musik, während wir dabei sind die Musik vom Kopf,
+          zur Probe und in Zukunft auch Online zu bekommen!<br>
+          <br>
+          Wir brennen schon auf unseren ersten Auftritt und freuen uns, wenn du uns dabei begleitest!<br>
+          Stay tuned! 🚀<br>
       </p>
     </div>
   </div>
