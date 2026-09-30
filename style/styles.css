@@ -33,7 +33,7 @@ body {
     margin: 0;
     overflow-x: hidden;
     /* background: radial-gradient(ellipse at center, #0a0a0f 0%, #000000 100%); */
-    background: url('../img/Background.jpeg') no-repeat center center fixed;
+    background: url('../img/Philosophers-Background.jpg') no-repeat center center fixed;
     
     background-size: cover;
     font-family: 'Metal Mania', sans-serif;
