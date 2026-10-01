@@ -8,10 +8,18 @@
   <link rel="stylesheet" href="./style/index.css?v=2026.09.29">
 </head>
 
-<body>
+    <body>
+  
+<div id="welcome">
+<h1>⚔ Willkommen bei ...</h1>
+</div>
+<audio id="bgMusic" loop>
+  <source src="./sound/Philosophers-Background.mp3" type="audio/mpeg">
+  Dein Browser unterstützt kein Audio.
+</audio>
 
       <div id="fadeOverlay"></div>
-      <div id="pageContent">
+      <div id="pageContent" class="blurred">
   <div class="bg-container">
 
       <img src="./img/Philosophers-Landing.jpg" alt="Philosophers Gate">
@@ -39,5 +47,37 @@
   </div>
 
   <script src="./script/index.js?v=2026.09.29"></script>
+
+<script>
+const startBtn = document.getElementById("startBtn");
+const welcome = document.getElementById("welcome");
+const content = document.getElementById("pageContent");
+const music = document.getElementById("bgMusic");
+const openText = document.getElementById("hoverText-1");
+const theText = document.getElementById("hoverText-2");
+const gateText = document.getElementById("hoverText-3");
+
+document.body.addEventListener("click", () => {
+
+music.play().catch(err => {
+console.log("Audio konnte nicht gestartet werden:", err);
+});
+
+content.style.filter = "blur(0px)";
+welcome.style.opacity = "0";
+welcome.style.transition = "opacity 1s";
+openText.style.animation = "portalText 6s infinite";
+setTimeout(() => {
+theText.style.animation = "portalText 6s infinite";
+}, 2000);
+setTimeout(() => {
+gateText.style.animation = "portalText 6s infinite";
+}, 4000);
+
+setTimeout(() => {
+welcome.style.display = "none";
+}, 1000);
+});
+</script>
   </body>
 </html>

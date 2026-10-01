@@ -154,7 +154,6 @@
     .hover-text-1,
     .hover-text-2,
     .hover-text-3 { 
-      animation: portalText 6s infinite;
       font-size: 10vmin;
     }
     
@@ -427,4 +426,40 @@
 
 #fadeOverlay.active {
     opacity: 1;
+}
+
+/* Eigentliche Seite */
+#pageContent {
+width: 100vw;
+height: 100vh;
+background: url("./images/hintergrund.jpg") center/cover no-repeat;
+transition: filter 1s ease;
+filter: blur(12px);
+}
+
+/* Willkommensfenster */
+#welcome {
+position: fixed;
+inset: 0;
+background: rgba(0,0,0,0.7);
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+color: white;
+font-family: 'Angel wish', sans-serif;
+z-index: 9999;
+}
+
+#welcome h1 {
+padding: 15px 30px;
+font-size: 1.2rem;
+font-family: 'Angel wish', sans-serif;
+font-size: 10vmin;
+background-color: rgba(0, 0, 0, 0.7);
+border: 2px solid white;
+border-radius: 10px;
+color: white;
 }
