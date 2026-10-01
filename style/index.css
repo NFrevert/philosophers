@@ -463,3 +463,15 @@ border: 2px solid white;
 border-radius: 10px;
 color: white;
 }
+
+#toggleAudio {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10000;
+}
