@@ -25,6 +25,10 @@
     src: url('../font/Fucking Hostile.ttf') format('truetype');
 }
 
+    .metal-mania {
+      font-family: 'Metal Mania', sans-serif;
+    }
+
 * {
     box-sizing: border-box;
 }
