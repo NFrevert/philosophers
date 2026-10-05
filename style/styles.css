@@ -16,13 +16,13 @@
     src: url('../font/metal-mania-v23-latin-regular.woff2') format('woff2');
 }
 
-/* angel wish */
+/* Fucking Hostile */
 @font-face {
     font-display: swap;
-    font-family: 'Angel wish';
+    font-family: 'Fucking Hostile';
     font-style: normal;
     font-weight: normal;
-    src: url('../font/Angel wish.ttf') format('truetype');
+    src: url('../font/Fucking Hostile.ttf') format('truetype');
 }
 
 * {
@@ -87,7 +87,7 @@ a {
 .navigation a {
     text-decoration: none;
     color: rgb(234, 234, 232);
-    font-family: 'Angel wish', sans-serif;
+    font-family: 'Fucking Hostile', sans-serif;
     font-size: 2em;
     position: absolute;
     color: rgb(143, 151, 196);
@@ -163,7 +163,7 @@ a {
     font-weight: bold;
     letter-spacing: 4px;
     font-size: 3em;
-    font-family: 'Angel wish';
+    font-family: 'Fucking Hostile';
     text-shadow: 4px 4px 0 black, -4px -4px 0 rgb(143, 151, 196);
 }
 
@@ -301,8 +301,7 @@ transform: rotate(360deg);
 h1 {
     font-weight: bold;
     letter-spacing: 2px;
-    font-family: 'Angel wish', sans-serif;
-    text-transform: uppercase;
+    font-family: 'Fucking Hostile', sans-serif;
     text-shadow: 2px 2px 0 black, -2px -2px 0 rgb(143, 151, 196);
 }
 
@@ -402,7 +401,7 @@ h1 {
     display: block;
     text-align: center;
     font-size: 0.9em;
-    font-family: 'Angel wish';
+    font-family: 'Fucking Hostile';
     color: #999;
     margin-top: 5px;
 }
