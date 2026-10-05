@@ -13,13 +13,13 @@ const sparks = document.getElementById('sparks');
 
         // Nach 3 Sekunden weiterleiten
         setTimeout(() => {
-            window.location.href = './html/aboutus.html';
+            window.location.href = './philosophers.html#aboutus';
         }, 3000);
     });
 
     /* Türspalt klickbar */
     document.getElementById('door-gap').addEventListener('click', () => {
-      window.location.href = './html/aboutus.html';
+      window.location.href = './philosophers.html#aboutus';
     });
 
     /* Funken erzeugen */
@@ -47,7 +47,7 @@ const sparks = document.getElementById('sparks');
 
     setInterval(createSpark, 120);
 
-    
+
 const startBtn = document.getElementById("startBtn");
 const welcome = document.getElementById("welcome");
 const content = document.getElementById("pageContent");

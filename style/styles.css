@@ -41,6 +41,7 @@ body {
     font-family: 'Metal Mania', sans-serif;
     color: rgb(234, 234, 232);
     overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 body.animation::after {
@@ -90,12 +91,14 @@ a {
 }
 
 .navigation a {
+    cursor: pointer;
     text-decoration: none;
     color: rgb(234, 234, 232);
     font-family: 'Fucking Hostile', sans-serif;
     font-size: 2em;
     position: absolute;
     color: rgb(143, 151, 196);
+    transition: color 0.5s ease;
 }
 
 .navigation .top-left {
@@ -356,9 +359,9 @@ h1 {
     z-index: 5;
 }
 
-.content-wrapper.animation {
+/* .content-wrapper.animation {
     animation: fadeInLogoText 4s ease-in-out;
-}
+} */
 
 .content-box {
     width: 100%;
@@ -378,6 +381,23 @@ h1 {
         0 0 25px rgba(143, 151, 196, 0.25),
         0 0 60px rgba(255, 80, 0, 0.15),
         inset 0 0 20px rgba(143, 151, 196, 0.12);
+    opacity: 1;
+
+    transition: opacity 0.3s ease;
+    animation: fadeInLogoText 4s ease-in-out;
+}
+
+@keyframes fadeInBlur {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.content-box.hidden {
+opacity: 0;
 }
 
 
