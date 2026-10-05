@@ -1,0 +1,32 @@
+
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('active');
+    }
+
+    /* 🔥 FUNKEN */
+    const fireSparks = document.getElementById('fireSparks');
+
+    function createFireSpark() {
+      const spark = document.createElement('div');
+      spark.classList.add('fire-spark');
+
+      // Startposition: unten
+      spark.style.left = Math.random() * window.innerWidth + 'px';
+      spark.style.top = Math.random() * window.innerHeight + 'px'
+
+      const size = Math.random() * 4 + 2;
+      spark.style.width = size + 'px';
+      spark.style.height = size + 'px';
+
+      const drift = (Math.random() - 0.5) * 80;
+      spark.style.setProperty('--drift-x', drift + 'px');
+
+      const speed = 1.6 + Math.random() * 1.2;
+      spark.style.animationDuration = speed + 's';
+
+      fireSparks.appendChild(spark);
+
+      setTimeout(() => spark.remove(), speed * 1000);
+    }
+
+    setInterval(createFireSpark, 120);
