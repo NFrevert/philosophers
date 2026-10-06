@@ -2,10 +2,10 @@
 /* brigadom - latin */
 @font-face {
     font-display: swap;
-    font-family: 'brigadom';
+    font-family: 'clear';
     font-style: normal;
     font-weight: 400;
-    src: url('../font/brigadom.ttf') format('truetype');
+    src: url('../font/Music Warrior.ttf') format('truetype');
 }
 
 /* Fucking Hostile */
@@ -18,7 +18,7 @@
 }
 
     .clear-text {
-      font-family: 'brigadom', sans-serif;
+      font-family: 'clear', sans-serif;
     }
 
 * {
@@ -30,7 +30,8 @@ body {
     background: url('../img/Philosophers-Background.jpg') no-repeat center center fixed;
     
     background-size: cover;
-    font-family: 'brigadom', sans-serif;
+    font-family: 'clear', sans-serif;
+    font-size:medium;
     color: rgb(234, 234, 232);
     overflow-x: hidden;
     overflow-y: scroll;

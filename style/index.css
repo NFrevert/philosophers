@@ -1,9 +1,9 @@
 @font-face {
     font-display: swap;
-    font-family: 'brigadom';
+    font-family: 'clear';
     font-style: normal;
     font-weight: 400;
-    src: url('../font/brigadom.ttf') format('truetype');
+    src: url('../font/Music Warrior.ttf') format('truetype');
 }
 
   @font-face {
@@ -19,7 +19,7 @@
     }
 
     .clear-text {
-      font-family: 'brigadom', sans-serif;
+      font-family: 'clear', sans-serif;
     }
 
     #pageContent {
