@@ -31,10 +31,9 @@ body {
     
     background-size: cover;
     font-family: 'clear', sans-serif;
-    font-size: large;
+    font-size: 1.5em;
     font-weight: bolder;
-    font-style: unset;
-    font-size:medium;
+    font-style: normal;
     color: rgb(234, 234, 232);
     overflow-x: hidden;
     overflow-y: scroll;
@@ -304,9 +303,10 @@ transform: rotate(360deg);
 
 h1 {
     font-weight: bold;
-    letter-spacing: 2px;
+    font-size: 4em;
+    letter-spacing: 4px;
     font-family: 'Fucking Hostile', sans-serif;
-    text-shadow: 2px 2px 0 black, -2px -2px 0 rgb(143, 151, 196);
+    text-shadow: 4px 4px 0 black, -4px -4px 0 rgb(143, 151, 196);
 }
 
 /* 🔥 Funken */
