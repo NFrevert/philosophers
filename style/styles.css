@@ -1,19 +1,11 @@
-/* rubik-glitch-regular - latin */
-@font-face {
-    font-display: swap;
-    font-family: 'Rubik Glitch';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../font/rubik-glitch-v2-latin-regular.woff2') format('woff2');
-}
 
-/* metal-mania-regular - latin */
+/* brigadom - latin */
 @font-face {
     font-display: swap;
-    font-family: 'Metal Mania';
+    font-family: 'brigadom';
     font-style: normal;
     font-weight: 400;
-    src: url('../font/metal-mania-v23-latin-regular.woff2') format('woff2');
+    src: url('../font/brigadom.ttf') format('truetype');
 }
 
 /* Fucking Hostile */
@@ -25,8 +17,8 @@
     src: url('../font/Fucking Hostile.ttf') format('truetype');
 }
 
-    .metal-mania {
-      font-family: 'Metal Mania', sans-serif;
+    .clear-text {
+      font-family: 'brigadom', sans-serif;
     }
 
 * {
@@ -38,7 +30,7 @@ body {
     background: url('../img/Philosophers-Background.jpg') no-repeat center center fixed;
     
     background-size: cover;
-    font-family: 'Metal Mania', sans-serif;
+    font-family: 'brigadom', sans-serif;
     color: rgb(234, 234, 232);
     overflow-x: hidden;
     overflow-y: scroll;

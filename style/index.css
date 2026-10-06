@@ -1,9 +1,9 @@
 @font-face {
     font-display: swap;
-    font-family: 'Metal Mania';
+    font-family: 'brigadom';
     font-style: normal;
     font-weight: 400;
-    src: url('../font/metal-mania-v23-latin-regular.woff2') format('woff2');
+    src: url('../font/brigadom.ttf') format('truetype');
 }
 
   @font-face {
@@ -18,8 +18,8 @@
       overflow: hidden;
     }
 
-    .metal-mania {
-      font-family: 'Metal Mania', sans-serif;
+    .clear-text {
+      font-family: 'brigadom', sans-serif;
     }
 
     #pageContent {
