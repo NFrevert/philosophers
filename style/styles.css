@@ -90,7 +90,7 @@ a {
     text-decoration: none;
     color: rgb(234, 234, 232);
     font-family: 'Fucking Hostile', sans-serif;
-    font-size: 2em;
+    font-size: 1.5em;
     position: absolute;
     color: rgb(143, 151, 196);
     transition: color 0.5s ease;
@@ -165,7 +165,7 @@ a {
 
     font-weight: bold;
     letter-spacing: 4px;
-    font-size: 3em;
+    font-size: 2em;
     font-family: 'Fucking Hostile';
     text-shadow: 4px 4px 0 black, -4px -4px 0 rgb(143, 151, 196);
 }
@@ -303,7 +303,8 @@ transform: rotate(360deg);
 
 h1 {
     font-weight: bold;
-    font-size: 4em;
+    font-size: 3em;
+    text-align: center;
     letter-spacing: 4px;
     font-family: 'Fucking Hostile', sans-serif;
     text-shadow: 4px 4px 0 black, -4px -4px 0 rgb(143, 151, 196);
