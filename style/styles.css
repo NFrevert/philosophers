@@ -31,6 +31,9 @@ body {
     
     background-size: cover;
     font-family: 'clear', sans-serif;
+    font-size: large;
+    font-weight: bolder;
+    font-style: unset;
     font-size:medium;
     color: rgb(234, 234, 232);
     overflow-x: hidden;
