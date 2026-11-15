@@ -25,13 +25,23 @@
     box-sizing: border-box;
 }
 
+
+
+img.background {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-50%);
+    object-fit: cover;
+    user-select: none;
+    pointer-events: none;
+}
+
 body {
     margin: 0;
-    background-image: url('../img/Philosophers-Background.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: top;
-    background-position-x: center;
+    background-color: #333;
     font-family: 'clear', sans-serif;
     font-size: 1.5em;
     font-weight: bolder;
