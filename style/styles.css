@@ -27,9 +27,11 @@
 
 body {
     margin: 0;
-    background: url('../img/Philosophers-Background.jpg') no-repeat center center fixed;
-    
+    background-image: url('../img/Philosophers-Background.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
+    background-position-y: top;
+    background-position-x: center;
     font-family: 'clear', sans-serif;
     font-size: 1.5em;
     font-weight: bolder;
