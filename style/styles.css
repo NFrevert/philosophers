@@ -301,13 +301,22 @@ transform: rotate(360deg);
     transform: rotate(63deg);
 }
 
-h1 {
+h1, h2 {
     font-weight: bold;
     font-size: 3em;
     text-align: center;
     letter-spacing: 4px;
     font-family: 'Fucking Hostile', sans-serif;
     text-shadow: 4px 4px 0 black, -4px -4px 0 rgb(143, 151, 196);
+}
+
+h2 {
+    font-size: 2em;
+    margin: 10px;
+}
+
+hr {
+    margin: 25px;
 }
 
 /* 🔥 Funken */
@@ -504,4 +513,59 @@ opacity: 0;
       to {
         transform: translateX(calc(100vw + 300px));
       }
+    }
+    .controls {
+        width: 100%;
+        display:flex;
+        gap: 10px;
+        justify-content: center;
+    }
+    
+    .controls button {
+        color: white;
+        background-color: transparent;
+        border-radius: 10px;
+        height: 50px;
+        width: 50px;
+        font-size: 20px;
+    }
+
+    .track-loading {
+        text-align: center;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        display: none;
+        opacity: 1;
+        transition: max-height 1s ease, opacity 0.8s ease;
+    }
+
+    .track-loading-text {
+        font-size: small;
+        padding:5px;
+    }
+    
+    .track-loading.active {
+        display: block;
+        max-height: 24px;
+        opacity: 1;
+    }
+
+    .lyrics {
+        text-align: center;
+        display: none;
+        max-height: 0;
+        opacity: 0;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 1s ease, opacity 0.8s ease, padding 1s ease;
+    }
+
+    .lyrics.open {
+        display: block;
+        max-height: 1000px;
+        opacity: 1;
+        padding: 10px;
     }

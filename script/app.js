@@ -28,6 +28,11 @@ async function loadPage(page, pushState = true) {
 
     setActiveMenu(page);
 
+    if(page === 'music')
+    {
+        enableAudio();
+    }
+
     if (pushState) {
         history.pushState(
             { page },
@@ -85,3 +90,95 @@ const initialPage =
     "aboutus";
 
 loadPage(initialPage, false);
+
+function enableAudio() {
+    // Audio-Spieler
+const player = document.getElementById("audioPlayer");
+// Alle Songs
+const tracks = document.querySelectorAll(".track");
+
+let currentTrack = null;
+
+tracks.forEach(track => {
+  const play = track.querySelector(".play");
+  const pause = track.querySelector(".pause");
+  const stop = track.querySelector(".stop");
+  const toggleLyrics = track.querySelector(".toggleLyrics");
+  const lyrics = track.querySelector(".lyrics");
+  const loading = track.querySelector(".track-loading");
+  let hasLoaded = false;
+
+  const source = track.dataset.src;
+
+  play.addEventListener("click", () => {
+    if(!hasLoaded) {
+        hasLoaded = true;
+
+        
+        loading.style.display = "block";
+        loading.style.maxHeight = "0";
+
+        requestAnimationFrame(() => {
+            loading.classList.add(['active']);
+            loading.style.maxHeight = loading.scrollHeight + "px";
+        })
+
+        loading.classList.add(['active']);
+        setTimeout(() => {
+            loading.style.maxHeight = loading.scrollHeight + "px";
+
+            requestAnimationFrame(() => {
+                loading.classList.remove(['active']);
+                loading.style.maxHeight = "0";
+            })
+        }, 3000)
+    }
+
+    // Anderen Song stopen
+    if (currentTrack !== track) {
+      player.pause();
+      player.currentTime = 0;
+
+      player.src = source;
+      currentTrack = track;
+    }
+
+    player.play();
+  });
+
+  pause.addEventListener("click", () => {
+    // pause
+    player.pause();
+  });
+
+  stop.addEventListener("click", () => {
+    // stopp
+    player.pause();
+    player.currentTime = 0;
+    currentTrack = null;
+    player.removeAttribute("src");
+    player.load();
+  });
+
+  toggleLyrics.addEventListener("click", () => {
+    if(lyrics.classList.contains('open'))
+    {
+        lyrics.style.maxHeight = (lyrics.scrollHeight + 20) + "px";
+        
+        requestAnimationFrame(() => {
+            lyrics.classList.remove(['open']);
+            lyrics.style.maxHeight = "0";
+        })
+        
+    } else {
+        lyrics.style.display = "block";
+        lyrics.style.maxHeight = "0";
+
+        requestAnimationFrame(() => {
+            lyrics.classList.add(['open']);
+            lyrics.style.maxHeight = (lyrics.scrollHeight + 20) + "px";
+        })
+    }
+  });
+})
+}

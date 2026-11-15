@@ -29,6 +29,7 @@
     }
 
     #pageContent.zoom {
+      transition: transform 2s ease-out;
       transform: scale(1.5);
     }
 
@@ -107,10 +108,10 @@
 
     .door-gap {
       position: absolute;
-      top: 26.7%;
+      top: 25.6%;
       left: calc(50% - 0.25%);
-      transform: rotate(-0.7deg);
-      height: 61.6%;
+      transform: rotate(-0.9deg);
+      height: 71.3%;
       width: 0.7%;
       border-radius: 5px;
       /* border: 2px #c02306 solid; */
