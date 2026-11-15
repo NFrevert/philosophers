@@ -444,7 +444,6 @@
 #pageContent {
 width: 100vw;
 height: 100vh;
-background: url("./images/hintergrund.jpg") center/cover no-repeat;
 transition: filter 1s ease;
 filter: blur(12px);
 }
