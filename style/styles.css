@@ -557,7 +557,6 @@ opacity: 0;
     }
     h2.active {
         text-decoration: underline;
-        border-bottom: 2px rgb(143, 151, 196) ridge;
     }
 
     .track-loading {
