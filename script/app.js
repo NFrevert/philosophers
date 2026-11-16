@@ -159,7 +159,6 @@ tracks.forEach(track => {
 
     // Anderen Song stopen
     if (currentTrack !== track) {
-      allButtonsInactive();
       player.pause();
       player.currentTime = 0;
 
@@ -177,6 +176,7 @@ tracks.forEach(track => {
   });
 
   stop.addEventListener("click", () => {
+    allButtonsInactive();
     // stopp
     player.pause();
     player.currentTime = 0;

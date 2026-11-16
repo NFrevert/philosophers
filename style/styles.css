@@ -555,8 +555,9 @@ opacity: 0;
         border-style: groove;
         cursor: pointer;
     }
+    
     h2.active {
-        text-decoration: underline;
+        /* text-decoration: underline; */
     }
 
     .track-loading {
