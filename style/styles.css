@@ -547,6 +547,7 @@ opacity: 0;
     .controls button img {
         border: rgb(143, 151, 196) 3px solid;
         border-radius: 25px;
+        cursor: pointer;
     }
 
     .track-loading {
