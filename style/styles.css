@@ -554,6 +554,10 @@ opacity: 0;
         border-style: groove;
         cursor: pointer;
     }
+    .controls h2.active {
+        text-decoration: underline;
+        border-bottom: 2px rgb(143, 151, 196) ridge;
+    }
 
     .track-loading {
         text-align: center;

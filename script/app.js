@@ -107,6 +107,7 @@ tracks.forEach(track => {
   const lyrics = track.querySelector(".lyrics");
   const loading = track.querySelector(".track-loading");
   const button = track.querySelector("button");
+  const head = track.querySelector("h2");
   let hasLoaded = false;
 
   const source = track.dataset.src;
@@ -114,8 +115,12 @@ tracks.forEach(track => {
   function allButtonsInactive() {
     tracks.forEach(t => {
         const btn = t.querySelector("button");
+        const h = t.querySelector("h2");
         if(btn) {
             btn.classList.remove("active");
+        }
+        if(h) {
+            h.classList.remove("active");
         }
     });
   }
@@ -124,6 +129,7 @@ tracks.forEach(track => {
     allButtonsInactive();
     setTimeout(() => {
         button.classList.add("active");
+        head.classList.add("active");
     }, 100);
   }
 
