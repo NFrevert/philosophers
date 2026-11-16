@@ -534,12 +534,19 @@ opacity: 0;
     }
     
     .controls button {
-        color: white;
+        color: rgb(234, 234, 232);
         background-color: transparent;
         border-radius: 10px;
         height: 50px;
         width: 50px;
-        font-size: 20px;
+        font-size: 50px;
+        border: 0px;
+        padding-bottom: 10px;
+    }
+
+    .controls button img {
+        border: rgb(143, 151, 196) 3px solid;
+        border-radius: 25px;
     }
 
     .track-loading {
