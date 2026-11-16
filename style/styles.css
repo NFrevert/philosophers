@@ -546,7 +546,7 @@ opacity: 0;
 
     .controls button img {
         border: rgb(143, 151, 196) 3px solid;
-        border-radius: 25px;
+        border-radius: 20px;
         cursor: pointer;
     }
 
