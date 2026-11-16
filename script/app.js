@@ -106,14 +106,29 @@ tracks.forEach(track => {
   const toggleLyrics = track.querySelector(".toggleLyrics");
   const lyrics = track.querySelector(".lyrics");
   const loading = track.querySelector(".track-loading");
+  const button = track.querySelector("button");
   let hasLoaded = false;
 
   const source = track.dataset.src;
 
+  function allButtonsInactive() {
+    tracks.forEach(t => {
+        const btn = t.querySelector("button");
+        if(btn) {
+            btn.classList.remove("active");
+        }
+    });
+  }
+
+  function buttonActive() {
+    allButtonsInactive();
+    button.classList.add("active");
+  }
+
   play.addEventListener("click", () => {
+    buttonActive();
     if(!hasLoaded) {
         hasLoaded = true;
-
         
         loading.style.display = "block";
         loading.style.maxHeight = "0";
@@ -136,6 +151,7 @@ tracks.forEach(track => {
 
     // Anderen Song stopen
     if (currentTrack !== track) {
+      allButtonsInactive();
       player.pause();
       player.currentTime = 0;
 
@@ -147,6 +163,7 @@ tracks.forEach(track => {
   });
 
   pause.addEventListener("click", () => {
+    allButtonsInactive();
     // pause
     player.pause();
   });

@@ -542,11 +542,16 @@ opacity: 0;
         font-size: 50px;
         border: 0px;
         padding-bottom: 10px;
+        transition: all 0.5s ease;
     }
-
+    .controls button:active img {
+        border-color: rgb(46, 46, 53);
+        border-style: ridge;
+    }
     .controls button img {
-        border: rgb(143, 151, 196) 3px solid;
+        border: rgb(143, 151, 196) 3px outset;
         border-radius: 20px;
+        border-style: groove;
         cursor: pointer;
     }
 
