@@ -122,7 +122,9 @@ tracks.forEach(track => {
 
   function buttonActive() {
     allButtonsInactive();
-    button.classList.add("active");
+    setTimeout(() => {
+        button.classList.add("active");
+    }, 100);
   }
 
   play.addEventListener("click", () => {
