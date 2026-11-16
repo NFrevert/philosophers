@@ -320,6 +320,7 @@ h1, h2 {
     letter-spacing: 4px;
     font-family: 'Fucking Hostile', sans-serif;
     text-shadow: 4px 4px 0 black, -4px -4px 0 rgb(143, 151, 196);
+    transition: all 0.5s ease
 }
 
 h2 {
@@ -554,7 +555,7 @@ opacity: 0;
         border-style: groove;
         cursor: pointer;
     }
-    .controls h2.active {
+    h2.active {
         text-decoration: underline;
         border-bottom: 2px rgb(143, 151, 196) ridge;
     }
